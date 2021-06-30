@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/index.css"],"names":[],"mappings":"AAAA,KACE,cAAe,CACf,gBAAiB,CACjB,mCACF,CAEA,EACE,UAAW,CACX,QAAS,CACT,SACF","file":"main.6b2a753d.chunk.css","sourcesContent":["body {\n  min-width: 100%;\n  min-height: 100vh;\n  font-family: 'Montserrat', sans-serif;\n}\n\n* {\n  color: #fff;\n  margin: 0;\n  padding: 0;\n}\n"]}
