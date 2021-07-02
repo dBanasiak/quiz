@@ -1,4 +1,5 @@
-import MainView from "./views/main-view/MainView";
+import React from 'react';
+import MainView from './views/main-view/MainView';
 
 function App() {
   return (

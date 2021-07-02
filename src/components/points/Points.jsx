@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { PointsText } from '../../style/Points/points';
 
 const Points = ({
@@ -9,6 +10,10 @@ const Points = ({
       Score: {points}
     </PointsText>
   );
+};
+
+Points.propTypes = {
+  points: PropTypes.number
 };
 
 export default Points;

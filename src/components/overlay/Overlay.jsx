@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { prizeStore } from '../../store/prizeStore';
 import { OverlayContainer, OverlayContainerMask, OverlayImage, OverlayPoints, OverlayResetButton, OverlayText, OverlayTitle } from '../../style/Overlay/overlay';
 import { getCurrentPrize } from './utils/getCurrentPrize';
@@ -12,7 +13,7 @@ const Overlay = ({
 
   const onResetButtonClick = () => {
     window.location.reload();
-  }
+  };
 
   return (
     !gameState && 
@@ -38,6 +39,11 @@ const Overlay = ({
         </OverlayContainer>
       </OverlayContainerMask>
   );
+};
+
+Overlay.propTypes = {
+  gameState: PropTypes.bool,
+  points: PropTypes.number
 };
 
 export default Overlay;

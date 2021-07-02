@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {
   questionsStore
 } from '../../store/questionsStore';
@@ -23,7 +24,7 @@ const Questions = ({
       }
       setBackgroundColor(false);
     }, 1000);
-  }
+  };
 
   return (
     <QuestionsContainer>
@@ -43,14 +44,21 @@ const Questions = ({
                   </QuestionsItem>
                 ))
               }
-            <QuestionsListLength>
-              {index + 1}/{questionsList.length}
-            </QuestionsListLength>
+              <QuestionsListLength>
+                {index + 1}/{questionsList.length}
+              </QuestionsListLength>
             </QuestionsWrapper>
         ))
       }
     </QuestionsContainer>
-  )
+  );
+};
+
+Questions.propTypes = {
+  setPointsClick: PropTypes.func,
+  setSlideClick: PropTypes.func,
+  slideIndex: PropTypes.func,
+  setBackgroundColor: PropTypes.func
 };
 
 export default Questions;
