@@ -57,7 +57,7 @@ const Questions = ({
 Questions.propTypes = {
   setPointsClick: PropTypes.func,
   setSlideClick: PropTypes.func,
-  slideIndex: PropTypes.func,
+  slideIndex: PropTypes.number,
   setBackgroundColor: PropTypes.func
 };
 
