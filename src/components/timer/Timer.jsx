@@ -4,11 +4,17 @@ import { TimerContainer, TimerText } from '../../style/Timer/timer';
 import { getCounterTime } from '../../utils/getCounterTime';
 
 const Timer = ({
-  setGameState
+  setGameState,
+  gameState
 }) => {
   const [counter, setCounter] = useState(120);
 
   useEffect(() => {
+    if (!gameState) {
+      setCounter(0);
+      return;
+    }
+
     if (counter === 0) {
       setGameState(false);
       return;
@@ -27,7 +33,8 @@ const Timer = ({
 };
 
 Timer.propTypes = {
-  setGameState: PropTypes.func
+  setGameState: PropTypes.func,
+  gameState: PropTypes.bool
 };
 
 export default Timer;
