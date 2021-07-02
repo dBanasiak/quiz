@@ -38,7 +38,7 @@ const MainView = () => {
       <Points
         points={currPoints}
         setGameState={onSetGameState}
-        currSlide={currSlide}
+        gameState={gameState}
       />
       <Questions
         setPointsClick={onSetPointsClick}

@@ -1,8 +1,7 @@
 import styled from 'styled-components';
 
 export const TimerContainer = styled.div`
-  display: flex;
-  margin-left: 20px;
+  border-bottom: 1px solid #fff
 `;
 
 export const TimerText = styled.p`

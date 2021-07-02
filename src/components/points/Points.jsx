@@ -6,17 +6,17 @@ import Timer from '../timer/Timer';
 const Points = ({
   points,
   setGameState,
-  currSlide
+  gameState
 }) => {
   return (
     <PointsContainer>
+      <Timer
+        setGameState={setGameState}
+        gameState={gameState}
+      />
       <PointsText>
         Score: {points}
       </PointsText>
-      <Timer
-        setGameState={setGameState}
-        currSlide={currSlide}
-      />
     </PointsContainer>
   );
 };
@@ -24,7 +24,7 @@ const Points = ({
 Points.propTypes = {
   points: PropTypes.number,
   setGameState: PropTypes.func,
-  currSlide: PropTypes.number
+  gameState: PropTypes.bool
 };
 
 export default Points;
