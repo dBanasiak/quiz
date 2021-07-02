@@ -1,19 +1,30 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { PointsText } from '../../style/Points/points';
+import { PointsContainer, PointsText } from '../../style/Points/points';
+import Timer from '../timer/Timer';
 
 const Points = ({
-  points
+  points,
+  setGameState,
+  currSlide
 }) => {
   return (
-    <PointsText>
-      Score: {points}
-    </PointsText>
+    <PointsContainer>
+      <PointsText>
+        Score: {points}
+      </PointsText>
+      <Timer
+        setGameState={setGameState}
+        currSlide={currSlide}
+      />
+    </PointsContainer>
   );
 };
 
 Points.propTypes = {
-  points: PropTypes.number
+  points: PropTypes.number,
+  setGameState: PropTypes.func,
+  currSlide: PropTypes.number
 };
 
 export default Points;

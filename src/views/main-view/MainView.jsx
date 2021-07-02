@@ -29,9 +29,17 @@ const MainView = () => {
     setBackgroundColor(color ? color : '#252A3F');
   };
 
+  const onSetGameState = (state) => {
+    setGameState(state);
+  };
+
   return (
     <MainViewContainer color={backgroundColor}>
-      <Points points={currPoints} />
+      <Points
+        points={currPoints}
+        setGameState={onSetGameState}
+        currSlide={currSlide}
+      />
       <Questions
         setPointsClick={onSetPointsClick}
         setSlideClick={onSetSlideClick}
